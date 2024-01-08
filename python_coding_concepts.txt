@@ -1,0 +1,10 @@
+Python is a high level interpreted coding language thats good for beginners because many functions and shortcuts are pre-written,
+so you can write complex code with less words. 
+Python is an interpreted language, meaning that code is executed line by line, top to bottom, which makes debugging easier.
+
+Installing Python: Download and install the latest version of Python from the official website.
+During installation, ensure that the 'Add Python to PATH' option is checked.
+                                                                                                                                
+Using a code editor is really good for organizing code, running and debugging, and adding helpful extensions
+                                                                                                                                
+Visual Studio Code (VScode) is the one I use and its widely accepted and documented and works easily with Raspberry Pi's.  
