@@ -1,10 +1,145 @@
-Python is a high level interpreted coding language thats good for beginners because many functions and shortcuts are pre-written,
-so you can write complex code with less words. 
 Python is an interpreted language, meaning that code is executed line by line, top to bottom, which makes debugging easier.
+Its a high level language thats good for beginners because many functions and shortcuts are pre-written,
+so you can write complex code with less words. 
 
 Installing Python: Download and install the latest version of Python from the official website.
 During installation, ensure that the 'Add Python to PATH' option is checked.
                                                                                                                                 
 Using a code editor is really good for organizing code, running and debugging, and adding helpful extensions
-                                                                                                                                
 Visual Studio Code (VScode) is the one I use and its widely accepted and documented and works easily with Raspberry Pi's.  
+Install it on your computer
+This is a good resource for getting started: https://code.visualstudio.com/docs/introvideos/basics
+
+Make sure to intall the Python extension 
+Open the Extensions view by clicking on the square icon on the left sidebar, or pressing Ctrl+Shift+X, and search for the Python extension.
+This extension provides features like IntelliSense, linting, debugging, code navigation, code formatting, Jupyter notebook support, refactoring, variable explorer, test explorer, and more.
+Basically auto correcting code syntax and giving suggestions if things are wrong, and color coding different parts of your code to make it easier to read and understand.
+
+All code is written in files or modules, and the entire project / collection of files is called a `directory`
+these are all saved in a folder in your computer
+
+files with the `.py` suffix are read as python files by your code interpreter.    example: `BA_run.py`
+other file types can be used too, I usually only use `.py` and `.txt` files. 
+`.txt` files are just like this one, a bunch of text with no code.   example: `python_coding_concepts.txt`
+
+
+Basic Syntax and Concepts
+
+Indentation: 
+Python uses whitespace indentation to delimit blocks of code. This is crucial in Python and a source of errors for beginners. 
+The standard is to use four spaces per indentation level.
+Indenting lines of code moves that code "into" the block you are working on, this organizes code into function blocks
+
+Comments: 
+These are notes that you can add to explain parts of the code. 
+These comments wont run or affect the code, they are for you or people you share your code with.
+Use "#" for single-line comments and triple quotes (""" or ''') for multi-line comments.
+for example
+
+Variables and Types: 
+Python is dynamically typed, which means you don’t have to explicitly declare variable types. Types are inferred when you run the file.
+For example, x = 5 or name = "Alice".
+
+Some other types of variables:
+x = 4              # int or integer
+y = 3.7            # float
+name = "John"      # str or string
+is_coding = True   # bool or boolean
+
+^^In this example, the variable types are commented out, those strictly for the peron reading it and wont affect the actual code
+
+
+Control Structures
+
+Conditional Statements: 
+These are used for decision making. Python supports the usual logical conditions from mathematics.
+if, elif, else:
+
+"if" Statement: The `if` statement is used to test a specific condition. If the condition is true, the indented block of code under it will be executed.
+
+x = 10
+if x > 5:
+    print("x is greater than 5")
+
+
+"elif" Statement: `elif` is short for "else if". It allows you to check multiple expressions for True and execute a block of code as soon as one of the conditions evaluates to True.
+
+if x > 10:
+    print("x is greater than 10")
+elif x > 5:
+    print("x is greater than 5 but not greater than 10")
+
+
+"else" Statement: The `else` statement catches anything which isn't caught by the preceding conditions. There can be at most one else statement, and it is optional.
+
+if x > 10:
+    print("x is greater than 10")
+elif x > 5:
+    print("x is greater than 5 but not greater than 10")
+else:
+    print("x is 5 or less")
+
+
+Loops: 
+`for` loops are typically used for iterating over a sequence (like a list, tuple, dictionary, set, or string). 
+`while` loops allow execution as long as a condition is true.
+
+for i in range(5):  # Loop from 0 to 4
+    print(i)
+
+while x < 5:
+    print(x)
+    x += 1
+
+
+
+Functions
+
+Function Definition: 
+Functions are defined using the `def` keyword. They can take arguments and return values. 
+Arguments can be positional or keyword arguments, and default values can be assigned to parameters.
+
+def greet(name):
+    return f"Hello, {name}!"
+
+^^In this example "greet" is the function and can change `(name)` based off information from earlier in the code. Like if you have a user input their name earlier, it can take that info and apply it to the funcion later 
+
+Scope: 
+Understand local vs global variable scope.
+This is where you explain to the code what these variables are and mean. 
+Local scopes are for individual functions. Global scope applies to the entire code.
+
+
+Data Structures
+
+Lists, Tuples, Sets, and Dictionaries are built-in data structures.
+
+List:
+A mutable, ordered collection of items.   numbers = [1, 2, 3]
+(An object is considered mutable if its state or value can be modified after it is created.)
+
+Tuple: 
+Immutable, ordered collection.   point = (2.0, 3.0)
+
+Set:
+Unordered collection of unique items.   unique_numbers = {1, 2, 3}
+
+Dictionary: 
+Key-value pairs, unordered.   person = {"name": "Alice", "age": 30}
+
+
+As code gets more complicated, you can seperate code into different files (modules) and `call` information from them into a another file, bringing functions or set-ups over without rewriting the enitre block of code
+When you want to use a function, a class, or any other item from a different Python module, you need to import it into your current file.
+
+Basic Import: 
+Use the `import` statement to bring in a module. For example, if you have a file `mymodule.py`, you can import it using:
+`import mymodule`
+
+You can also import specific functions, classes, or variables from a module:
+`from mymodule import my_function, MyClass`
+Now you can use `my_function` and `MyClass` directly without prefixing them with `mymodule.`.
+
+this is most easily done when all the files are in the same directory
+
+
+
